@@ -1,0 +1,18 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "impcore",
+      "displayName": "Impcore with Ninja",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/impcore"
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "impcore",
+      "configurePreset": "impcore",
+      "targets": ["impcore"]
+    }
+  ]
+}
