@@ -1,0 +1,23 @@
+(define sigma (m n)
+  (if (< n m)
+    0
+    (+ 
+      n 
+      (sigma m (- n 1))
+    )
+  )
+)
+
+(define sigma-gold (m n) 
+  (/
+    (* 
+      (- (+ n 1) m)
+      (+ m n)
+    )
+    2
+  )
+)
+
+(check-expect (sigma 1 2) (sigma-gold 1 2))
+(check-expect (sigma 33 56) (sigma-gold 33 56))
+(check-expect (sigma 78 56) 0)
